@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>prueba</title>
+</head>
+<body>
+	<SCRIPT language="JavaScript">
+	function mostrar(){
+		var frase=document.datos.mensaje_cifrado.value;
+		//var frase2=c10;
+		//var cx=c1,c2,c3,c4,c5,c6,c7,c8,c9,c10;
+		
+		var c1=frase.replace(/a/gm,"Z");
+		var c2=c1.replace(/b/gm,"Y");
+		var c3=c2.replace(/c/gm,"X");
+		var c4=c3.replace(/d/gm,"W");
+		var c5=c4.replace(/e/gm,"V");
+		var c6=c5.replace(/f/gm,"U");
+		var c7=c6.replace(/g/gm,"T");
+		var c8=c7.replace(/h/gm,"S");
+		var c9=c8.replace(/i/gm,"R");
+		var c10=c9.replace(/j/gm,"Q");
+		var c11=c10.replace(/k/gm,"P");
+		var c12=c11.replace(/l/gm,"O");
+		var c13=c12.replace(/m/gm,"N");
+		var c14=c13.replace(/n/gm,"M");
+		var c15=c14.replace(/o/gm,"L");
+		var c16=c15.replace(/p/gm,"K");
+		var c17=c16.replace(/q/gm,"J");
+		var c18=c17.replace(/r/gm,"I");
+		var c19=c18.replace(/s/gm,"H");
+		var c20=c19.replace(/t/gm,"G");
+		var c21=c20.replace(/u/gm,"F");
+		var c22=c21.replace(/v/gm,"E");
+		var c23=c22.replace(/w/gm,"D");
+		var c24=c23.replace(/x/gm,"C");
+		var c25=c24.replace(/y/gm,"B");
+		var c26=c25.replace(/z/gm,"A");
+	
+	document.open();
+	document.write(c26);
+	document.close();
+	}
+	
+	</SCRIPT>
+	<form name="datos" >
+		<P> 
+						<font face="raro, courier" size=4>
+						Mensaje a cifrar:	
+						<BR>
+						<input type="text" name="mensaje_cifrado" size="100" maxlength="200" placeholder="Ingrese el mensaje que desea cifrar"></input>
+						<!--<textarea name="mensaje_cifrado" cols="50" rows="10" placeholder="Ingrese el mensaje que desea cifrar"></textarea>-->
+					</p>
+					<input type="submit" value="Enviar y Cifrar" name="send" onclick="mostrar()" ></input>
+					<INPUT type="reset" value="Limpiar"></INPUT>
+		</form>
+</body>
+</html>

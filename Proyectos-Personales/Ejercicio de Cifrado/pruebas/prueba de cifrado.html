@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>CIFRADOR</title>
+			<SCRIPT language="JavaScript">
+			
+				//var abc="a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z";
+				//var f1=document.datos.mensaje_cifrado;
+				
+				function mensaje(){
+				var fra=document.datos.mensaje_cifrado.value;
+				return true
+				}
+				
+				//var frase=mensaje_cifrado
+				var cifrado=mensaje.replace("a","z");
+		
+		function mostrar(){
+		document.open();
+		document.write(cifrado);
+		document.close();
+		}
+			
+			</SCRIPT>
+	</head>
+<body>
+	<table>
+		<form name="datos" method="post">
+		<P> 
+						<font face="raro, courier" size=4>
+						Mensaje a cifrar:	
+						<BR>
+						<input type="text" name="mensaje_cifrado" size="100" maxlength="200" placeholder="Ingrese el mensaje que desea cifrar"></input>
+						<!--<textarea name="mensaje_cifrado" cols="50" rows="10" placeholder="Ingrese el mensaje que desea cifrar"></textarea>-->
+					</p>
+					<input type="submit" value="Enviar y Cifrar" name="send" onclick="mostrar();" ></input>
+					<INPUT type="reset" value="Limpiar"></INPUT>
+		</form>
+	</table>
+
+</body>
+</html>
+<script>
+//var abc=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+				//var cba="z, y, x, w, v, t, s, r, q, p, o, n, m, l, k, j, i, h, g, f, e, d, c, b, a";
+				// f1=frase 
+				</script>
+ <!--//var ABC=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","V","W","X","Y","Z"];-->
+  

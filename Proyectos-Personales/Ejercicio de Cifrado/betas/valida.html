@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Formulario Encriptador</title>
+	<script src="java.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="icono.ico"> </link>
+</head>
+
+	<body bgcolor="3b83bd">
+		<center>
+			<table border="1" cellpadding="5" bgcolor="white">
+				<p><font face="raro, courier" color="white" size=10> Formulario Encriptador </p>
+				<hr>
+				<form name="datos" method="post" >
+					<TR> 
+					<TH>
+					<font face="raro, courier" size=4>
+					<p align="left">
+							<br>
+							Nombre:
+							 &nbsp &nbsp &nbsp <INPUT type="text" name="nombre" size="30" maxlength="35" placeholder="Escriba su Nombre">
+							<br><br>
+							 Apellido:
+							 &nbsp &nbsp <INPUT type="text" name="apellido" size="30" maxlength="35" placeholder="Escriba su Apellido">
+							<br><br>
+							 C&eacute;dula:
+							&nbsp &nbsp &nbsp <INPUT type="number" name="cedula" size="30" maxlength="8" placeholder="Introduzca su Cedula">
+							<br><br>
+							Universidad
+							<!--<INPUT type="text" name="universidad" size="18" maxlength="35" placeholder="Escriba su Universidad">-->
+							<SELECT name="universidad" size="1" onBlur="veruni();">
+								<option selected> Indique su Universidad</option>
+								<option value="IUTA"> IUTA</option>
+								<option value="UCV">Univeridad Central de Venezuela</option>
+								<option value="ULA">Universidad de Los Andes</option>
+								<option value="UCAB">Universidad Cat&oacute;lica Andres Bello</option>
+								<option value="MonteAvila">Universidad Monte Avila</option>
+								<option value="USB">Universidad Sim&oacute;n Bol&iacute;var</option>
+								<option value="Unefa">UNEFANB</option>
+								<option value="noestudia">Ninguna</option>
+								<option value="otra">Otra</option>
+							</SELECT>
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+							<br><br>
+							 Correo Electr&oacute;nico
+							<INPUT type="text" name="email" size="20" maxlength="30" placeholder="Escriba su Correo"> </INPUT>
+							&nbsp 
+							<br><br>
+					</p>	
+					</TH>
+					</TR>
+					<TH>	
+						<P> 
+							<font face="raro, courier" size=4>
+							Mensaje a Encriptar:	
+							<BR>
+							<textarea name="mensaje_cifrado" cols="50" rows="10" placeholder="Ingrese el mensaje que desea Encriptar " ></textarea>
+						</p>
+						<input type="button" value="Validar" onclick="validacion()"></input>
+						<input type="button" value="Encriptar Mensaje" onclick="mostrar()"></input>
+						<INPUT type="reset" value="Limpiar"></INPUT>
+					</TH>
+					
+				</form>
+			</table>
+		</center>
+		
+		<p align="right" ><font face="Lucida Calligraphy" color="white" size=3>Hecho por : &nbsp; &nbsp;  <br> "ZMRYZO ERVONZ"</p>
+	</body>
+</html>

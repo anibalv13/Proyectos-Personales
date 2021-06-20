@@ -1,0 +1,175 @@
+<html>
+<head>
+	<title>Formulario Encriptador</title>
+	<script >
+		//Bienvenida al sistema
+alert("Vamos a Encriptar");
+//validar universidad
+function veruni()
+	{ if(document.forms[0].universidad.selectedIndex == 0)
+	 { alert("Por favor seleccione su universidad");
+	 document.forms[0].universidad.focus;}
+	 else
+	 {return true;}}
+// esta funcion va a evaluar la variable "d" que sera el name del formulario de html y se encarga de ver que el campo no este vacio
+function ver(d) { 
+if(d.value.length==0)
+	{ alert("El campo "+d.name+" no puede estar vacio");
+			d.focus();
+		return false; } 
+		else 
+	{ return true; } }
+
+//validar nombre, apellido, cedula, universidad y correo
+function validacion(){ 
+		var control=false;
+			if(ver(document.datos.nombre))
+			if(ver(document.datos.apellido))
+			if(ver(document.datos.cedula))
+			if(veruni())
+			if(ver(document.datos.email))
+			if(correo())
+			if(ver(document.datos.mensaje_cifrado))
+			control=true;
+		
+		if(control)
+			alert("El formulario fue llenado con exito");
+		else 
+			return false; } 
+// para validar el correo método "Vicky"
+function correo() {
+	// Asignamos una variable "cont" para Evaluar el campo email 
+	cont=document.datos.email.value;
+	//con la variable "arroba" buscamos el cararacter espécifico de "@"
+	arroba=cont.indexOf("@");
+	// Con esta variable medimos la longitud del campo
+	longitud=cont.length;
+	
+	if (arroba<3){
+		alert("Por favor ingrese una direccion de correo valida");
+		document.datos.email.focus();
+		return false;
+		}	
+	//para validar el punto	
+	//p1= punto 1
+	p1=cont.lastIndexOf(".");
+	//vef= verificar
+	vef=longitud-p1;
+	if (vef<3){
+		alert("Por favor ingrese una direccion de correo valida");
+		document.datos.email.focus();
+		return false;
+	}
+	//para validar que tenga punto y arroba
+		//p_a= punto y arroba
+	p_a=cont.indexOf(".",arroba);
+	//longitud2
+	longitud2=p_a-arroba;
+	if (longitud2<1){
+		alert("Por favor ingrese una direccion de correo valida");
+		document.datos.email.focus();
+		return false;
+	} else {
+		return true;
+		}
+	}
+	//encriptador
+	function mostrar(){
+		var frase=document.datos.mensaje_cifrado.value.toLowerCase();
+     //frase.toLowerCase();
+
+		var c1=frase.replace(/a/gm,"Z");
+		var c2=c1.replace(/b/gm,"Y");
+		var c3=c2.replace(/c/gm,"X");
+		var c4=c3.replace(/d/gm,"W");
+		var c5=c4.replace(/e/gm,"V");
+		var c6=c5.replace(/f/gm,"U");
+		var c7=c6.replace(/g/gm,"T");
+		var c8=c7.replace(/h/gm,"S");
+		var c9=c8.replace(/i/gm,"R");
+		var c10=c9.replace(/j/gm,"Q");
+		var c11=c10.replace(/k/gm,"P");
+		var c12=c11.replace(/l/gm,"O");
+		var c13=c12.replace(/m/gm,"N");
+		var c14=c13.replace(/n/gm,"M");
+		var c15=c14.replace(/o/gm,"L");
+		var c16=c15.replace(/p/gm,"K");
+		var c17=c16.replace(/q/gm,"J");
+		var c18=c17.replace(/r/gm,"I");
+		var c19=c18.replace(/s/gm,"H");
+		var c20=c19.replace(/t/gm,"G");
+		var c21=c20.replace(/u/gm,"F");
+		var c22=c21.replace(/v/gm,"E");
+		var c23=c22.replace(/w/gm,"D");
+		var c24=c23.replace(/x/gm,"C");
+		var c25=c24.replace(/y/gm,"B");
+		var c26=c25.replace(/z/gm,"A");
+
+	alert("su mensaje encriptado es: "+ c26);
+	}
+	</script>
+	<link rel="shortcut icon" type="image/x-icon" href="favico.ico"> </link>
+</head>
+
+	<body bgcolor="3b83bd">
+		<center>
+			<table border="1" cellpadding="5" bgcolor="white">
+				<p><font face="raro, courier" color="white" size=10> Formulario Encriptador </p>
+				<hr color="white"> 
+				<form name="datos" method="post" >
+					<TR> 
+					<TH>
+					<font face="raro, courier" size=4>
+					<p align="left">
+							<br>
+							Nombre:
+							 &nbsp &nbsp &nbsp <INPUT type="text" name="nombre" size="30" maxlength="35" placeholder="Escriba su Nombre">
+							<br><br>
+							 Apellido:
+							 &nbsp &nbsp <INPUT type="text" name="apellido" size="30" maxlength="35" placeholder="Escriba su Apellido">
+							<br><br>
+							 C&eacute;dula:
+							&nbsp &nbsp &nbsp <INPUT type="number" name="cedula" size="30" maxlength="8" placeholder="Introduzca su Cedula">
+							<br><br>
+							Universidad
+							<!--<INPUT type="text" name="universidad" size="18" maxlength="35" placeholder="Escriba su Universidad">-->
+							<SELECT name="universidad" size="1" onBlur="veruni();">
+								<option selected> Indique su Universidad</option>
+								<option value="IUTA"> IUTA</option>
+								<option value="UCV">Univeridad Central de Venezuela</option>
+								<option value="ULA">Universidad de Los Andes</option>
+								<option value="UCAB">Universidad Cat&oacute;lica Andres Bello</option>
+								<option value="MonteAvila">Universidad Monte Avila</option>
+								<option value="USB">Universidad Sim&oacute;n Bol&iacute;var</option>
+								<option value="Unefa">UNEFANB</option>
+								<option value="noestudia">Ninguna</option>
+								<option value="otra">Otra</option>
+							</SELECT>
+							&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+							<br><br>
+							 Correo Electr&oacute;nico
+							<INPUT type="text" name="email" size="20" maxlength="30" placeholder="Escriba su Correo"> </INPUT>
+							&nbsp 
+							<br><br>
+					</p>	
+					</TH>
+					</TR>
+					<TH>	
+						<P> 
+							<font face="raro, courier" size=4>
+							Mensaje a Encriptar:	
+							<BR>
+							<textarea name="mensaje_cifrado" cols="50" rows="10" placeholder="Ingrese el mensaje que desea Encriptar " ></textarea>
+						</p>
+						<input type="button" value="Validar" onclick="validacion()"></input>
+						<input type="button" value="Encriptar Mensaje" onclick="mostrar()"></input>
+						<INPUT type="reset" value="Limpiar"></INPUT>
+					</TH>
+					
+				</form>
+			</table>
+		</center>
+		
+		<p align="right" ><font face="Lucida Calligraphy" color="white" size=3>Hecho por : &nbsp; &nbsp;  <br> "ZMRYZO ERVONZ"</p>
+	</body>
+</html>
