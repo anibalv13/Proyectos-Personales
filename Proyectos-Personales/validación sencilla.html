@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>Cifrador</title>
+	<script src="java.js"></script>
+</head>
+
+	<body bgcolor="3b83bd">
+		<center>
+			<table border="1" cellpadding="5" bgcolor="white">
+				<p><font face="raro, courier" color="white" size=10> Formulario Cifrador </p><hr>
+		j		<form name="datos" method="post" action="valida.html" onSubmit="return chequeoFinal();">
+				<TR> 
+				<TH>
+				<font face="raro, courier" size=4>
+				<center>
+						Nombre:
+						<INPUT type="text" name="nombre" size="18" maxlength="35" placeholder="Escriba su nombre">
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+						<br><br>
+						&nbsp Apellido:
+						<INPUT type="text" name="apellido" size="18" maxlength="35" placeholder="Escriba su apellido">
+						&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+						<br><br>
+						<!--Fecha de nacimineto:
+						<INPUT type="date" name="fdenac" size="8" maxlegth="12" >&nbsp
+						<br><br> -->
+						 C&eacute;dula:
+						<INPUT type="number" name="cedula" size="10" maxlegth="8" placeholder="Introduzca su cedula">
+						&nbsp &nbsp &nbsp &nbsp &nbsp
+						<br><br>
+						&nbsp &nbsp &nbsp Universidad
+						<INPUT type="text" name="universidad" size="18" maxlength="35" placeholder="Escriba su Universidad">
+						
+						
+						<!-- <br><br>
+					Estado
+						<SELECT name="estado" size="1" onBlur="verestado();"> 
+							<OPTION selected>Seleccione un estado 
+							<OPTION value="Amazonas">Amazonas
+							<OPTION value="Anzoategui">Anzo&aacute;tegui
+							<OPTION value="Apure">Apure
+							<OPTION value="Aragua">Aragua
+							<OPTION value="Barinas">Barinas
+							<OPTION value="Bolivar">Bol&iacute;var
+							<OPTION value="Carabobo">Carabobo
+							<OPTION value="Cojedes">Cojedes
+							<OPTION value="Delta Amacuro">Delta Amacuro
+							<OPTION value="Distrito Capital">Distrito Capital
+							<OPTION value="Falcon">Falc&oacute;n
+							<OPTION value="Guarico">Gu&aacute;rico
+							<OPTION value="Lara">Lara
+							<OPTION value="Merida">M&eacute;rida
+							<OPTION value="Miranda">Miranda
+							<OPTION value="Monagas">Monagas
+							<OPTION value="Nueva Esparta">Nueva Esparta
+							<OPTION value="Portuguesa">Portuguesa
+							<OPTION value="Sucre">Portuguesa
+							<OPTION value="Tachira">T&aacute;chira
+							<OPTION value="Trujillo">Trujillo
+							<OPTION value="Vargas">Vargas
+							<OPTION value="Yaracuy">Yaracuy
+							<OPTION value="Zulia">Zulia
+						</SELECT> -->
+					&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+						<br><br>
+						&nbsp Correo Electr&oacute;nico
+						<INPUT type="email" name="email" size="20" maxlegth="30" placeholder="Escriba su correo"> </INPUT>
+						&nbsp 
+						<br><br>
+						</center>
+				</TH>
+				</TR>
+				<TH>	
+					<P> 
+						<font face="raro, courier" size=4>
+						Mensaje a cifrar:	
+						<BR>
+						<textarea name="recomendaciones" cols="50" rows="10" placeholder="Ingrese el mensaje que desea cifrar"></textarea>
+					</p>
+					<input type="submit" value="Enviar y Cifrar" ></input>
+					<INPUT type="reset" value="Limpiar"
+				</TH>
+				
+				</form>
+				
+			</table>
+		</center>
+		
+	</body>
+</html>
