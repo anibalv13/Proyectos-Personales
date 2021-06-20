@@ -1,0 +1,106 @@
+:root {
+    --letra: rgb(58, 60, 167);
+    --fondo: #544EC6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    background: url(Imagenes/Fondo.jpg);
+    background-size: 95rem;
+}
+
+.cont1 {
+    width: 70%;
+    height:auto;
+    margin: auto;
+    padding-bottom: 1rem;
+}
+
+header {
+    padding: 30px;
+}
+
+header .cont1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logotipo {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: var(--letra);
+    font-size: 40px;
+}
+
+header nav a{
+    color: #000000;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color:#2271b3
+}
+
+main .cont1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form_reg{
+    width:60rem;
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input, .btn{
+    background-color: #FFFFFF;
+    padding: .5rem;
+    margin: .5rem 0;
+    border: none;
+    border-bottom: solid #2271b3 .3rem;
+    transition: all .5s;
+
+}
+
+.input:focus {
+    border-bottom: solid #707070;
+}
+
+.btn {
+    width: 40%;
+    border-bottom: none;
+    background-color:#151515;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #2271b3;
+}
+
+.ok {
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	background-color: #4e8;
+	color: #fff
+}
+.bad {
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	background-color: #a22;
+	color: #fff;
+}
